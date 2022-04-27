@@ -26,7 +26,7 @@ function App() {
           <div>
             <h5 className="reservation-header">Reservations</h5>
             <div className="reservation-cards-container">
-            {reservations.map((name, i) => <ReservationCard name={name} key={i}/>)}
+            {reservations.map((name, i) => <ReservationCard name={name} key={i} id={i}/>)}
             </div>
           </div>
           <div className="reservation-input-container">
@@ -37,7 +37,7 @@ function App() {
         </div>
         <div className="customer-food-container">
           {orders.map((order, i) => {
-            return <OrderCard key={i} order={order} />
+            return <OrderCard key={i} order={order} id={i}/>
           })}
         </div>
       </div>

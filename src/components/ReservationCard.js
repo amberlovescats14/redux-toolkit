@@ -4,11 +4,11 @@ import { removeReservation } from '../features/reservationSlice';
 
 
 const ReservationCard = (props) => {
-  const { name, key } = props
+  const { name, id } = props
 
   const dispatch = useDispatch()
   const handleDelete = () => {
-    dispatch(removeReservation(key))
+    dispatch(removeReservation(id))
   }
   return (
     <div 

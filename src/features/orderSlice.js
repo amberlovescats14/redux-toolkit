@@ -25,9 +25,9 @@ export const orderSplice = createSlice(
     },
     addOrder: (state, action) => {
       const { payload } = action
-      const { index, item } = payload
-      state.value.forEach((order, i) => {
-        if (i == index) order.orders.push(item)
+      const { index, order } = payload
+      state.value.forEach((o, i) => {
+        if (i == index) o.orders.push(order)
       })
     },
     removeOrder: (state, action) => {
